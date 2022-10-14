@@ -18,5 +18,3 @@ export const menuWidth = 240
 
 /** 侧边栏折叠宽度 */ 
 export const menuCollapsedWidth = 50
-
-/**  */ 
