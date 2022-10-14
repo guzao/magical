@@ -1,5 +1,5 @@
 <template>
-    <n-layout-header :style="style" >
+    <n-layout-header :style="layoutHeaderPadding" >
 
         <div class="w-auto flex justify-between items-center h-full">
 
@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts" setup>
+import { layoutHeaderPadding } from '@/appConfig';
 import RightAction from './RightAction.vue'
-const style = { height: '68px', padding: '0px 24px' }
 </script>
   
 <style lang="scss" scoped>

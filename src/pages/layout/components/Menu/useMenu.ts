@@ -1,13 +1,16 @@
-import { h, ref, computed,  watch  } from 'vue'
+import { h, ref, computed, watch , nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import type { MenuOption } from 'naive-ui'
 import { BookmarkOutline, CaretDownOutline } from '@vicons/ionicons5'
 import { router } from '@/router'
+import { useLayout } from '@/store'
 
 export function useMenu () {
 
     const route = useRoute()
+
+    const layout = useLayout()
 
     const menuOptions: MenuOption[] = [
       {
@@ -54,6 +57,7 @@ export function useMenu () {
     const getSelectedKeys = ref(route.path)
 
     watch(route, () => {
+      layout.setOffsetTop(0)
       getSelectedKeys.value = defaultValue.value
     })
     
@@ -74,8 +78,10 @@ export function useMenu () {
       return  null
     }
 
-    const clickMenuItem = (key: string) => router.push(key)
-
+    const clickMenuItem = (key: string) => {
+      layout.setOffsetTop(0)
+      router.push(key)
+    }
 
     return {
         menuOptions,

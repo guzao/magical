@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { darkTheme } from 'naive-ui'
 import { utils } from '@/utils'
+import { layoutBgcColr } from '@/appConfig'
 export const useTheme = defineStore('useTheme', {
     state() {
         return {
@@ -20,7 +21,7 @@ export const useTheme = defineStore('useTheme', {
         },
         /** 明、暗色模式下容器背景色 */
         themeBgcColr (state) {
-            return  state.theme ? {} : { 'background-color': '#f4f4f4' }
+            return  state.theme ? {} : { 'background-color': layoutBgcColr }
         }
     }
 

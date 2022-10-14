@@ -4,10 +4,10 @@
 
     <n-layout position="absolute" :style="theme.themeBgcColr"   >
 
+      <!-- 头部 -->
       <n-collapse-transition :show="isShowHeader">
         <Header  />
       </n-collapse-transition>
-      <!-- 头部 -->
 
       <n-layout has-sider position="absolute" :style="{...layoutStyle, ...theme.themeBgcColr, ...layoutPadding }"   >
 
@@ -33,5 +33,6 @@
   import { useLayoutData } from './useLayout'
   import { useTheme } from '@/store'
   const theme = useTheme()
-  const { isShowHeader, layoutStyle, layoutPadding } = useLayoutData()
+  const { layoutStyle, layoutPadding, isShowHeader } = useLayoutData()
+
 </script>

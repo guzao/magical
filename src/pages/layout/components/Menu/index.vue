@@ -4,10 +4,10 @@
     <n-layout-sider
         bordered
         collapse-mode="width"
-        :collapsed-width="0"
-        :width="240"
+        :collapsed-width="menuCollapsedWidth"
+        :width="menuWidth"
         :collapsed="collapsed"
-        :show-trigger="false"
+        :show-trigger="!false"
         @collapse="collapsed = true"
         @expand="collapsed = false"
     >
@@ -34,13 +34,7 @@
 
 <script setup lang="ts" >
   import { useMenu } from './useMenu'
-  import { useTheme } from '@/store'
-  import { useRoute } from 'vue-router'
-
-  const route = useRoute()
-
-  
-  const theme = useTheme()
+  import { menuWidth, menuCollapsedWidth } from '@/appConfig'
   const { 
     menuOptions,
     collapsed,
@@ -51,6 +45,7 @@
     expandIcon,
     clickMenuItem
   } = useMenu()
+
 </script>
 
 
