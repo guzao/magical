@@ -1,4 +1,4 @@
-import { h, ref, computed,  } from 'vue'
+import { h, ref, computed,  watch  } from 'vue'
 import { useRoute } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import type { MenuOption } from 'naive-ui'
@@ -6,10 +6,12 @@ import { BookmarkOutline, CaretDownOutline } from '@vicons/ionicons5'
 import { router } from '@/router'
 
 export function useMenu () {
-    
+
+    const route = useRoute()
+
     const menuOptions: MenuOption[] = [
       {
-        label: '首页',
+        label: '首页看板',
         key: '/dashboder',
         type: '',
         url: 'dashboder',
@@ -21,25 +23,21 @@ export function useMenu () {
           {
             label: '电站运行概览',
             key: '/monitor/overView',
-            type: '',
             url: '/monitor/overView',
           },
           {
             label: '设备工况详情',
             key: '/monitor/subSite',
-            type: '',
             url: '/monitor/subSite',
           },
           {
             label: '告警事件查看',
             key: '/monitor/reportAlarm',
-            type: '',
             url: '/monitor/reportAlarm',
           },
           {
             label: '历史曲线查询',
             key: '/monitor/history',
-            type: '',
             url: '/monitor/history',
           },
         ],
@@ -50,8 +48,13 @@ export function useMenu () {
     const collapsed = ref(!true)
 
     const defaultValue = computed(() => {
-      const route = useRoute()
       return route.path
+    })
+
+    const getSelectedKeys = ref(route.path)
+
+    watch(route, () => {
+      getSelectedKeys.value = defaultValue.value
     })
     
     const renderMenuLabel = (option: MenuOption) => {
@@ -71,14 +74,14 @@ export function useMenu () {
       return  null
     }
 
-    const clickMenuItem = (key: string) => {
-      router.push(key)
-    }
+    const clickMenuItem = (key: string) => router.push(key)
+
 
     return {
         menuOptions,
         collapsed,
         defaultValue,
+        getSelectedKeys,
         renderMenuLabel,
         renderMenuIcon,
         expandIcon,

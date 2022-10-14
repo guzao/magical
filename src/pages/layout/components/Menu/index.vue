@@ -22,6 +22,7 @@
           :render-label="renderMenuLabel"
           :render-icon="renderMenuIcon"
           :expand-icon="expandIcon"
+          :value="getSelectedKeys"
           @update:value="clickMenuItem"
           />
 
@@ -34,11 +35,17 @@
 <script setup lang="ts" >
   import { useMenu } from './useMenu'
   import { useTheme } from '@/store'
+  import { useRoute } from 'vue-router'
+
+  const route = useRoute()
+
+  
   const theme = useTheme()
   const { 
     menuOptions,
     collapsed,
     defaultValue,
+    getSelectedKeys,
     renderMenuLabel,
     renderMenuIcon,
     expandIcon,
