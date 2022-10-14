@@ -2,7 +2,7 @@
 export const layoutBgcColr = '#f4f4f4'
 
 /** Main容器 padding配置 */ 
-export const mainLayoutContainerPadding  =  { padding: '0 48px 0 48px' }
+export const mainLayoutContainerPadding  =  { padding: '0 48px 30px 48px' }
 
 /** header容器 padding配置 */ 
 export const layoutHeaderPadding  =  { height: '68px', padding: '0px 24px' }
