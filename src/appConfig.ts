@@ -8,13 +8,16 @@ export const mainLayoutContainerPadding  =  { padding: '0 48px 30px 48px' }
 export const layoutHeaderPadding  =  { height: '68px', padding: '0px 24px' }
 
 /** 滚动条距离顶部多少时展示导航栏 */ 
-export const offsetNumber = 40
+export const offsetNumber = 68
 
 /** 顶部展示导航栏高度 */ 
 export const navBarHeight = 68
 
 /** menu 侧边栏展开宽度 */ 
-export const menuWidth = 240
+export const menuWidth = 220
 
 /** 侧边栏折叠宽度 */ 
 export const menuCollapsedWidth = 50
+
+/** 侧边栏缩进值 */ 
+export const menuIndent = 28

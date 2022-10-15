@@ -15,7 +15,7 @@
       <n-scrollbar style="max-height: 100vh">
           <n-menu
           :default-value="defaultValue"
-          :indent="30"
+          :indent="menuIndent"
           :collapsed="collapsed"
           :collapsed-icon-size="22"
           :options="menuOptions"
@@ -34,7 +34,7 @@
 
 <script setup lang="ts" >
   import { useMenu } from './useMenu'
-  import { menuWidth, menuCollapsedWidth } from '@/appConfig'
+  import { menuWidth, menuCollapsedWidth, menuIndent } from '@/appConfig'
   const { 
     menuOptions,
     collapsed,

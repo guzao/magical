@@ -1,6 +1,6 @@
 <template>
 
-  <n-scrollbar :on-scroll="onScroll" ref="refScrollbar" style="max-height: 100vh">
+  <n-scrollbar :on-scroll="onScroll" ref="refScrollbar" >
 
     <n-layout-content :style="{ ...theme.themeBgcColr, ...mainLayoutContainerPadding }"  >
       <router-view></router-view>
@@ -14,7 +14,7 @@
 import { useRoute } from 'vue-router'
 import { ref, onMounted, nextTick, watch } from 'vue'
 import { useLayout,  useTheme } from '@/store'
-import { mainLayoutContainerPadding } from '@/appConfig';
+import { mainLayoutContainerPadding, offsetNumber } from '@/appConfig';
 const theme = useTheme()
 const refScrollbar: any = ref(null)
 const { setOffsetTop, setScrollbarInstRef } = useLayout()
@@ -28,7 +28,9 @@ watch(router, () => routerIsUpdate.value = true)
 
 const onScroll = () => {
   const offsetTop = refScrollbar.value.scrollbarInstRef.containerScrollTop
-  setOffsetTop(offsetTop)
+  if (offsetTop >= offsetNumber && offsetTop <= offsetNumber ) {
+    setOffsetTop(offsetTop)
+  }
   nextTick(() => {
     if (routerIsUpdate.value) {
       setOffsetTop(0)

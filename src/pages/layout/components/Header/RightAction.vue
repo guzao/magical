@@ -1,7 +1,8 @@
 <template>
     <div class="flex-1 flex justify-end">  
 
-        <div class="mr-4">
+
+        <div class="mr-2">
             <n-button @click="changeTheme"> {{ renderIncon() }} </n-button>
         </div>
 
@@ -24,7 +25,7 @@ import {
     PersonCircleOutline as UserIcon,
     Pencil as EditIcon,
     LogOutOutline as LogoutIcon,
-    BatteryFullSharp
+    
 } from '@vicons/ionicons5'
 
 
@@ -35,9 +36,6 @@ const renderIcon = (icon: Component) => {
         })
     }
 }
-
-const useImg = renderIcon(BatteryFullSharp)
-
 
 
 const themeData = useTheme()
