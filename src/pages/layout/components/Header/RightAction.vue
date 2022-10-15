@@ -2,15 +2,14 @@
     <div class="flex-1 flex justify-end">  
 
         <div class="mr-2">
-            <n-button quaternary  @click="changeTheme"> {{ renderIncon() }} </n-button>
+            <n-button   @click="changeTheme"> {{ renderIncon() }} </n-button>
         </div>
-
+        
         <div>
             <n-dropdown :options="options">
-                <n-button quaternary > 🙋‍♂️ 用户资料 </n-button>
+                <n-button  > 🙋‍♂️ 用户资料 </n-button>
             </n-dropdown>
         </div>
-
 
     </div>
 </template>
@@ -24,6 +23,7 @@ import {
     PersonCircleOutline as UserIcon,
     Pencil as EditIcon,
     LogOutOutline as LogoutIcon,
+    FunnelOutline, Menu
     
 } from '@vicons/ionicons5'
 

@@ -35,12 +35,13 @@ export const menuOptions: MenuOption[] = [
   {
     label: '首页看板',
     key: '/dashboder',
-    type: '',
+    type: 'SpeedometerOutline',
     url: 'dashboder',
   },
   {
     label: '信息监视',
     key: 'pinball-1973',
+    type: 'DesktopOutline',
     children: [
       {
         label: '电站运行概览',
@@ -63,6 +64,5 @@ export const menuOptions: MenuOption[] = [
         url: '/monitor/history',
       },
     ],
-    type: ''
   }
 ]
