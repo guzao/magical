@@ -1,14 +1,13 @@
 <template>
     <div class="flex-1 flex justify-end">  
 
-
         <div class="mr-2">
-            <n-button @click="changeTheme"> {{ renderIncon() }} </n-button>
+            <n-button quaternary  @click="changeTheme"> {{ renderIncon() }} </n-button>
         </div>
 
         <div>
             <n-dropdown :options="options">
-                <n-button> 🙋‍♂️ 用户资料 </n-button>
+                <n-button quaternary > 🙋‍♂️ 用户资料 </n-button>
             </n-dropdown>
         </div>
 

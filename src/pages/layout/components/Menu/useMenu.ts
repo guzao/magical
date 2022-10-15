@@ -1,52 +1,19 @@
-import { h, ref, computed, watch , nextTick } from 'vue'
+import { h, ref, computed, watch  } from 'vue'
 import { useRoute } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import type { MenuOption } from 'naive-ui'
 import { BookmarkOutline, CaretDownOutline } from '@vicons/ionicons5'
 import { router } from '@/router'
 import { useLayout } from '@/store'
+import { menuOptions } from '@/appConfig'
+
+
 
 export function useMenu () {
 
     const route = useRoute()
 
     const layout = useLayout()
-
-    const menuOptions: MenuOption[] = [
-      {
-        label: '首页看板',
-        key: '/dashboder',
-        type: '',
-        url: 'dashboder',
-      },
-      {
-        label: '信息监视',
-        key: 'pinball-1973',
-        children: [
-          {
-            label: '电站运行概览',
-            key: '/monitor/overView',
-            url: '/monitor/overView',
-          },
-          {
-            label: '设备工况详情',
-            key: '/monitor/subSite',
-            url: '/monitor/subSite',
-          },
-          {
-            label: '告警事件查看',
-            key: '/monitor/reportAlarm',
-            url: '/monitor/reportAlarm',
-          },
-          {
-            label: '历史曲线查询',
-            key: '/monitor/history',
-            url: '/monitor/history',
-          },
-        ],
-        type: ''
-      }
-    ]
     
     const collapsed = ref(!true)
 

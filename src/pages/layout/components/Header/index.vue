@@ -1,5 +1,5 @@
 <template>
-    <n-layout-header :style="layoutHeaderPadding" >
+    <n-layout-header :style="layoutHeaderPadding" class="relative top-0">
 
         <div class="w-auto flex justify-between items-center h-full">
 
