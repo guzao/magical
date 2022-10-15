@@ -46,7 +46,7 @@ export function useMenu () {
     }
 
     const clickMenuItem = (key: string) => {
-      layout.setOffsetTop(0)
+      layout.scrollbarScrollTo()
       router.push(key)
     }
 
