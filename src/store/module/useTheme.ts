@@ -8,7 +8,8 @@ import { zhCN, dateZhCN, enUS, dateEnUS } from 'naive-ui'
 export const useTheme = defineStore('useTheme', {
     state() {
         return {
-            theme: utils.getTheme(),
+            /** 是否暗夜模式 */
+            theme: utils.getTheme() as boolean,
             lang: {
                 currentLang: zhCN,
                 currentDateLang: dateZhCN

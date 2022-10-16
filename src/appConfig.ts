@@ -15,10 +15,10 @@ export const layoutHeaderPadding  =  { height: '68px', padding: '0px 24px' }
 export const offsetNumber = 180
 
 /** 顶部展示导航栏高度 */ 
-export const navBarHeight = 68
+export const navBarHeight = 64
 
 /** menu 侧边栏展开宽度 */ 
-export const menuWidth = 200
+export const menuWidth = 220
 
 /** 侧边栏折叠宽度 */ 
 export const menuCollapsedWidth = 50
