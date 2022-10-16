@@ -1,11 +1,13 @@
 import { offsetNumber } from '@/appConfig'
+import { getIsCollapsed, setIsCollapsed } from '@/utils/module/layout'
 import { defineStore } from 'pinia'
 
 export const useLayout = defineStore('useLayout', {
     state() {
         return {
             offsetTop: 0,
-            scrollbarInstRef: null as any
+            scrollbarInstRef: null as any,
+            collapsed: getIsCollapsed() as boolean
         }
     },
     actions: {
@@ -23,6 +25,10 @@ export const useLayout = defineStore('useLayout', {
         /** 滚动到顶部 */
         scrollbarScrollTo () {
             this.scrollbarInstRef?.scrollTo({ top: 0 })
+        },
+        setIsCollapsed (collapsed: boolean) {
+            setIsCollapsed(collapsed)
+            this.collapsed = collapsed
         }
     },
     getters: {

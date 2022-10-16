@@ -6,17 +6,17 @@
         collapse-mode="width"
         :collapsed-width="menuCollapsedWidth"
         :width="menuWidth"
-        :collapsed="collapsed"
+        :collapsed="layout.collapsed"
         :show-trigger="!false"
-        @collapse="collapsed = true"
-        @expand="collapsed = false"
+        @collapse="layout.setIsCollapsed(true)"
+        @expand="layout.setIsCollapsed(false)"
     >
         
       <n-scrollbar style="max-height: 100vh">
           <n-menu
           :default-value="defaultValue"
           :indent="menuIndent"
-          :collapsed="collapsed"
+          :collapsed="layout.collapsed"
           :collapsed-icon-size="22"
           :options="menuOptions"
           :render-label="renderMenuLabel"
@@ -33,8 +33,11 @@
 </template>
 
 <script setup lang="ts" >
+  import { watch } from 'vue'
   import { useMenu } from './useMenu'
+  import { utils } from '@/utils'
   import { menuWidth, menuCollapsedWidth, menuIndent } from '@/appConfig'
+  import { useLayout } from '@/store'
   const { 
     menuOptions,
     collapsed,
@@ -45,7 +48,9 @@
     expandIcon,
     clickMenuItem
   } = useMenu()
-
+  
+  const layout = useLayout()
+  
 </script>
 
 
