@@ -1,4 +1,4 @@
-import StatickPageContainer from "./StatickPageContainer.vue";
+import StatickPageContainer from "./common/StaticPageContainer.vue";
 
 export {
   StatickPageContainer
