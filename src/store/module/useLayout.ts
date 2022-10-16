@@ -12,11 +12,8 @@ export const useLayout = defineStore('useLayout', {
     },
     actions: {
         /** 设置滚动的距离 */
-        setOffsetTop (offsetTop: number, onScroll?: any) {
+        setOffsetTop (offsetTop: number) {
             this.offsetTop = offsetTop
-            if (onScroll) {
-                console.log('onScroll======')
-            }
         },
         /** 记录滚动条实力 */
         setScrollbarInstRef (scrollbarInstRef: any) {
