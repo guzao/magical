@@ -1,5 +1,5 @@
 <template>
-  <NConfigProvider :locale="themeData.lang.currentLang" :date-locale="themeData.lang.currentLangDateLang" :theme="themeData.globalTheme">
+  <NConfigProvider :locale="themeData.lang.currentLang" :date-locale="themeData.lang.currentDateLang" :theme="themeData.globalTheme">
     <router-view></router-view>
   </NConfigProvider>
 </template>

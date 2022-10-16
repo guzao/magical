@@ -11,7 +11,7 @@ export const useTheme = defineStore('useTheme', {
             theme: utils.getTheme(),
             lang: {
                 currentLang: zhCN,
-                currentLangDateLang: dateZhCN
+                currentDateLang: dateZhCN
             }
         }
     },
@@ -33,4 +33,5 @@ export const useTheme = defineStore('useTheme', {
     }
 
 })
+
 
