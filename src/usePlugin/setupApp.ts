@@ -9,9 +9,9 @@ import { useRouter } from './useRouter'
 /**  初始化app */
 export function setupApp (): void {
     const appInstance = createApp(App)
+    useNaiveUI(appInstance)
     useRouter(appInstance)
     usePinan(appInstance)
     useI18n(appInstance)
-    useNaiveUI(appInstance)
     appInstance.mount('#app')
 }

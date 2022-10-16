@@ -1,5 +1,3 @@
-
-
 <template>
   <NConfigProvider :theme="themeData.globalTheme">
     <router-view></router-view>
@@ -11,7 +9,6 @@
 import { useTheme } from '@/store'
 const themeData = useTheme()
 </script>
-
 
 <style scoped lang="scss">
 .n-layout-sider__border {
