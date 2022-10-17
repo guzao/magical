@@ -1,7 +1,7 @@
 <template>
     <n-space vertical>
         <n-card title="小卡片"  v-for="item in 3" :key="item">
-            <div class="text-red-400 dark:text-green-400">
+            <div class="dark:text-light-500 text-black">
                 历史曲线
             </div>
             <n-date-picker v-model:value="timestamp" type="date" />
