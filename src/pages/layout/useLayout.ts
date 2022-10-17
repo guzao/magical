@@ -8,7 +8,7 @@ export function useLayoutData () {
     const layoutData = useLayout()
 
     /** 主容器布局样式 */ 
-    const layoutStyle = computed(() => layoutData.isShowHeader ? { top: `${ navBarHeight }px` } : { top: '0' })
+    const layoutStyle = computed(() => layoutData.isShowHeader ? { top: `${ navBarHeight  }px` } : { top: '0' })
 
     /** 头部是否展示 */ 
     const isShowHeader = computed(() => layoutData.isShowHeader )

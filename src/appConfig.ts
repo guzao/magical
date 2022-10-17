@@ -11,7 +11,7 @@ export const layoutBgcColr = '#f4f4f4'
 export const mainLayoutContainerPadding  =  { padding: '0 48px 30px 48px' }
 
 /** 顶部展示导航栏高度 */ 
-export const navBarHeight = 64
+export const navBarHeight = 58
 
 /** header容器 padding配置 */ 
 export const layoutHeaderPadding  =  { height: navBarHeight + 'px', padding: '0px 24px' }
@@ -28,7 +28,6 @@ export const menuCollapsedWidth = 50
 
 /** 侧边栏缩进值 */ 
 export const menuIndent = 28
-
 
 
 

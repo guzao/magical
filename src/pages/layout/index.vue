@@ -5,9 +5,7 @@
     <n-layout position="absolute" :style="theme.themeBgcColr"   >
 
       <!-- 头部 -->
-      <n-collapse-transition :show="isShowHeader">
-        <Header />
-      </n-collapse-transition>
+      <Header class="absolute w-full" :show="isShowHeader" />
 
       <n-layout has-sider position="absolute" :style="{...layoutStyle, ...theme.themeBgcColr, ...layoutPadding }"   >
 
