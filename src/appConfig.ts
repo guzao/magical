@@ -1,6 +1,8 @@
 import type { MenuOption } from 'naive-ui'
 
 
+/** 默认路径跳转路径 */
+export const defaultUrl = '/dashboder'
 
 /** layout容器浅色模式下背景色   */
 export const layoutBgcColr = '#f4f4f4'
@@ -8,14 +10,15 @@ export const layoutBgcColr = '#f4f4f4'
 /** Main容器 padding配置 */ 
 export const mainLayoutContainerPadding  =  { padding: '0 48px 30px 48px' }
 
+/** 顶部展示导航栏高度 */ 
+export const navBarHeight = 64
+
 /** header容器 padding配置 */ 
-export const layoutHeaderPadding  =  { height: '68px', padding: '0px 24px' }
+export const layoutHeaderPadding  =  { height: navBarHeight + 'px', padding: '0px 24px' }
 
 /** 滚动条距离顶部多少时展示导航栏  值要大于导航栏高度 */ 
 export const offsetNumber = 220
 
-/** 顶部展示导航栏高度 */ 
-export const navBarHeight = 64
 
 /** menu 侧边栏展开宽度 */ 
 export const menuWidth = 220

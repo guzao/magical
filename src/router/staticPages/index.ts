@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 import Layout from '@/pages/layout/index.vue'
+import { defaultUrl } from '@/appConfig'
 
 export const staticpages: RouteRecordRaw [] = [
     
@@ -51,7 +52,7 @@ export const staticpages: RouteRecordRaw [] = [
     {
         path: '/',
         component: Layout,
-        redirect: '/dashboder',
+        redirect: defaultUrl,
         meta: {
             title: '工作台',
         },

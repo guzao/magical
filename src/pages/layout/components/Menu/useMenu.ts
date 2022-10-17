@@ -8,7 +8,6 @@ import { useLayout } from '@/store'
 import { menuOptions } from '@/appConfig'
 
 
-
 const iconMap = {
   'DesktopOutline': DesktopOutline,
   "BookmarkOutline": BookmarkOutline,

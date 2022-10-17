@@ -23,6 +23,7 @@ export const useLayout = defineStore('useLayout', {
         scrollbarScrollTo () {
             this.scrollbarInstRef?.scrollTo({ top: 0 })
         },
+        /** 侧边栏展开状态 */
         setIsCollapsed (collapsed: boolean) {
             setIsCollapsed(collapsed)
             this.collapsed = collapsed

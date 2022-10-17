@@ -3,7 +3,7 @@
 
         <div class="w-auto flex justify-between items-center h-full">
 
-            <div class="flex-1"> SMART OPS </div>
+            <LetfAction />
 
             <RightAction />
 
@@ -13,8 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-import { layoutHeaderPadding } from '@/appConfig';
 import RightAction from './RightAction.vue'
+import LetfAction from './LetfAction.vue'
+import { layoutHeaderPadding } from '@/appConfig';
 </script>
   
 <style lang="scss" scoped>
