@@ -17,15 +17,20 @@ export const useTheme = defineStore('useTheme', {
         }
     },
     actions: {
+        /** 设置主题 */ 
         setTheme (theme: boolean) {
             this.theme = theme
             utils.setTheme(theme)
+        },
+        
+        /** 初始化主题 检查是否是derk模式 是 html添加 dark 反之什么也不做 */
+        initTheme () {
+            utils.initTheme()
         }
     },
     getters: {
         /** 全局主题 */
         globalTheme (state) {
-            console.log(darkTheme)
             return state.theme ? darkTheme : null
         },
         /** 明、暗色模式下容器背景色 */

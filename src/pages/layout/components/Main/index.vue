@@ -18,7 +18,7 @@
 import { useRoute } from 'vue-router'
 import { ref, onMounted, nextTick, watch } from 'vue'
 import { useLayout,  useTheme } from '@/store'
-import { mainLayoutContainerPadding, offsetNumber } from '@/appConfig';
+import {  offsetNumber, mainLayoutContainerPadding } from '@/appConfig';
 const theme = useTheme()
 const refScrollbar: any = ref(null)
 const { setOffsetTop, setScrollbarInstRef } = useLayout()

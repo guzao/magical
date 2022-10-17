@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useLayout } from '@/store'
-import { navBarHeight } from '@/appConfig'
+import { navBarHeight, showHeaderMainLayoutContainerPadding, hieednHeaderMainLayoutContainerPadding } from '@/appConfig'
 
 /**  布局数据 */
 export function useLayoutData () {
@@ -14,7 +14,7 @@ export function useLayoutData () {
     const isShowHeader = computed(() => layoutData.isShowHeader )
 
     /** 主容器布局padidng */
-    const layoutPadding = computed(() => ({ padding: `${ isShowHeader.value ? 18 : 8 }px 0 0 18px` } ))
+    const layoutPadding = computed(() => ( isShowHeader.value ? showHeaderMainLayoutContainerPadding : hieednHeaderMainLayoutContainerPadding ))
 
     return {
         layoutStyle,

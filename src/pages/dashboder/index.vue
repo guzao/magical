@@ -3,7 +3,7 @@
   <n-space vertical>
   
     <n-card title="工作站" >
-      <div class="h-40">  测试 </div>
+      <div class="h-40 test">  测试 </div>
     </n-card>
 
     <div class="flex flex-wrap justify-between">
@@ -25,5 +25,14 @@
   </n-space>
 </template>
   
+<script lang="ts" setup></script>
+
+
+<style lang="scss" scoped>
+@import '@/styles/index.scss';
+.test {
+  color: $red;
+}
+</style>
   
      
