@@ -3,7 +3,9 @@
   <n-scrollbar :on-scroll="onScroll" ref="refScrollbar" >
 
     <n-layout-content  :style="{ ...theme.themeBgcColr, ...mainLayoutContainerPadding }"  >
+      <!-- 二级路由出口 -->
       <router-view></router-view>
+      
     </n-layout-content>
 
     <n-back-top  :visibility-height="offsetNumber" class="scale-z-150" :right="4" />

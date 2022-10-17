@@ -2,6 +2,7 @@
 
     <!-- 侧边栏 -->
     <n-layout-sider
+        :style="theme.themeBgcColr"
         collapse-mode="width"
         :collapsed-width="menuCollapsedWidth"
         :width="menuWidth"
@@ -31,7 +32,7 @@
 <script setup lang="ts" >
   import { useMenu } from './useMenu'
   import { menuWidth, menuCollapsedWidth, menuIndent } from '@/appConfig'
-  import { useLayout } from '@/store'
+  import { useLayout, useTheme } from '@/store'
   const { 
     menuOptions,
     defaultValue,
@@ -43,6 +44,7 @@
   } = useMenu()
   
   const layout = useLayout()
+  const theme = useTheme()
   
 </script>
 

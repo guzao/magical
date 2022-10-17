@@ -7,7 +7,7 @@
       <!-- 头部 -->
       <Header class="absolute w-full" :show="isShowHeader" />
 
-      <n-layout has-sider position="absolute" :style="{...layoutStyle, ...theme.themeBgcColr, ...layoutPadding }"   >
+      <n-layout has-sider position="absolute" :style="{ ...layoutStyle, ...theme.themeBgcColr, ...layoutPadding }"   >
 
         <!-- 菜单 -->
         <Menu />

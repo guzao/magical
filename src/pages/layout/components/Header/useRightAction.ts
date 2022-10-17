@@ -1,4 +1,4 @@
-import { Component, h, watch } from 'vue';
+import { Component, h, computed } from 'vue';
 import { useTheme } from '@/store'
 import { NIcon } from 'naive-ui'
 import { useFullScreen } from '@/hooks'
@@ -47,6 +47,10 @@ export function userRightAction () {
     ]
 
     const { toggleFullScreen, isFullScreen } = useFullScreen()
+
+    const fullScreenTipsText = computed(() => isFullScreen.value ? '退出全屏' : '进入全屏')
+
+    const themeTipsText = computed(() => themeData.theme ? '切换浅色模式' : '切换深色模式')
     
     return {
         options,
@@ -55,7 +59,9 @@ export function userRightAction () {
         toggleFullScreen,
         isFullScreen,
         ContractOutline,
-        ExpandOutline
+        ExpandOutline,
+        fullScreenTipsText,
+        themeTipsText
     }
 
 }

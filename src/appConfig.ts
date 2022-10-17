@@ -5,7 +5,7 @@ import type { MenuOption } from 'naive-ui'
 export const defaultUrl = '/dashboder'
 
 /** layout容器浅色模式下背景色   */
-export const layoutBgcColr = '#f4f4f4'
+export const layoutBgcColr = '#f6f7f8'
 
 /** Main容器 padding配置 */ 
 export const mainLayoutContainerPadding  =  { padding: '0 48px 30px 48px' }
@@ -28,7 +28,6 @@ export const menuCollapsedWidth = 50
 
 /** 侧边栏缩进值 */ 
 export const menuIndent = 28
-
 
 
 

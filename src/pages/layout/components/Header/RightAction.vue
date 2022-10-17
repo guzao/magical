@@ -2,16 +2,18 @@
     <div class="flex-1 flex justify-end">  
 
         <div class="mr-2">
-            <n-button quaternary @click="toggleFullScreen"> 
-                <NIcon  size="20">
+            <TooltipButtion @click="toggleFullScreen" :quaternary="true" :icon-size="20" :text="fullScreenTipsText">
+                <template #icon >
                     <ContractOutline v-if="isFullScreen" />
                     <ExpandOutline v-else />
-                </NIcon>
-            </n-button>
+                </template>
+            </TooltipButtion>
         </div>
 
         <div class="mr-2">
-            <n-button quaternary @click="changeTheme"> {{ renderIncon() }} </n-button>
+            <TooltipButtion @click="changeTheme" :quaternary="true"  :text="themeTipsText">
+                {{ renderIncon() }} 
+            </TooltipButtion>
         </div>
         
         <div>
@@ -24,9 +26,9 @@
 </template>
 
 <script lang="ts" setup>
-import { NIcon } from 'naive-ui'
+import { TooltipButtion } from '@/components'
 import { userRightAction } from './useRightAction'
-const { options, changeTheme, renderIncon, toggleFullScreen, isFullScreen, ContractOutline, ExpandOutline } = userRightAction()
+const { options, changeTheme, renderIncon, toggleFullScreen, isFullScreen, fullScreenTipsText, themeTipsText, ContractOutline, ExpandOutline } = userRightAction()
 </script>
 
 <style lang="scss" scoped>
